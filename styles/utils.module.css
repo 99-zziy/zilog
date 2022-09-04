@@ -25,6 +25,13 @@
   line-height: 1.5;
 }
 
+.description {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0;
+}
+
 .borderCircle {
   border-radius: 9999px;
 }
