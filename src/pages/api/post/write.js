@@ -1,5 +1,5 @@
+import { createPost } from '@/lib/posts'
 import { format } from 'date-fns'
-import { createPost } from '../../../lib/posts'
 
 export default async function handler(req, res) {
   const { id, title, content } = req.body

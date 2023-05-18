@@ -1,7 +1,6 @@
+import Layout from '@/components/Layout'
+import { getAllPostIds, getPostData } from '@/lib/posts'
 import Head from 'next/head'
-import Layout from '../../../components/Layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../../components/date'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
