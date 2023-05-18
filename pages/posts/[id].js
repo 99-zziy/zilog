@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Layout from '../../components/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -29,8 +28,8 @@ export default function Post({ postData }) {
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1>{postData.title}</h1>
+        <div>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
