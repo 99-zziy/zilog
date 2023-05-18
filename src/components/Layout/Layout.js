@@ -2,12 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import * as S from './Layout.style'
+
 const name = 'zzi'
 export const siteTitle = 'Zilog'
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+    <S.Container>
       <Head>
         <link rel="icon" href="/favicon/favicon.ico" />
         <meta
@@ -23,7 +25,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header>
+      <S.Header>
         {home ? (
           <>
             <Image
@@ -32,6 +34,9 @@ export default function Layout({ children, home }) {
               height={144}
               width={144}
               alt={name}
+              style={{
+                borderRadius: '9999px',
+              }}
             />
             <h1>{name}</h1>
           </>
@@ -45,6 +50,9 @@ export default function Layout({ children, home }) {
                   height={108}
                   width={108}
                   alt={name}
+                  style={{
+                    borderRadius: '9999px',
+                  }}
                 />
               </a>
             </Link>
@@ -55,15 +63,15 @@ export default function Layout({ children, home }) {
             </h2>
           </>
         )}
-      </header>
+      </S.Header>
       <main>{children}</main>
       {!home && (
-        <div>
+        <S.BackToHome>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
-        </div>
+        </S.BackToHome>
       )}
-    </div>
+    </S.Container>
   )
 }

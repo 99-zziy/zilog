@@ -13,6 +13,18 @@ const style = css`
     font-size: 18px;
   }
 
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0;
+  }
+
   * {
     box-sizing: border-box;
   }
