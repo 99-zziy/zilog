@@ -17,7 +17,7 @@
 .headingLg {
   font-size: 1.5rem;
   line-height: 1.4;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 
 .headingMd {
@@ -34,6 +34,7 @@
 
 .borderCircle {
   border-radius: 9999px;
+  object-fit: cover;
 }
 
 .colorInherit {
